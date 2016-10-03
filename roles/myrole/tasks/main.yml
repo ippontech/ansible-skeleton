@@ -1,0 +1,4 @@
+---
+# Example : 
+# - include_vars: vault.yml
+# - include: actions.yml
