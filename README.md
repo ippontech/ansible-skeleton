@@ -8,7 +8,7 @@ Skeleton for starting an Ansible project following "best-pratices".
 ## Testing
 You can run this example using the following command  :
 ```
-ansible-playbook -i staging playbooks/main.yml
+ansible-playbook -i inventory/staging playbooks/main.yml
 ```
 
 ----
