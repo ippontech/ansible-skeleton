@@ -1,0 +1,5 @@
+---
+- name: Start 
+  hosts: dev 
+  roles:
+  - role: myrole 
