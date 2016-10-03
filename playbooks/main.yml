@@ -1,5 +1,5 @@
 ---
 - name: Start 
-  hosts: dev 
+  hosts: local 
   roles:
   - role: myrole  

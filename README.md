@@ -5,6 +5,15 @@
 Skeleton for starting an Ansible project following "best-pratices".
 
 ----
+## Testing
+You can run this example using the following command  :
+```
+ansible-playbook -i staging playbooks/main.yml
+```
+
+----
+
+----
 ## Useful links
 - [Ansible : Filters string] (https://github.com/lxhunter/ansible-filter-plugins)
 - [Ansible : test driven developpement] (https://github.com/nickjj/rolespec) 
