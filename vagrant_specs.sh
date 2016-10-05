@@ -25,7 +25,7 @@ if [ "x$1" == "x--install" ]; then
     ln -s /vagrant/tests/$2/ /home/vagrant/testdir/tests/ 
     sudo chown -R vagrant:vagrant /home/vagrant/testdir 
     sudo chmod -R 777 /home/vagrant/testdir 
-    echo "alias specs='sudo chmod -R 777 /home/vagrant/testdir/ ; chmod 777 /home/vagrant/testdir/tests/setup_xenforo/test ; specs'" >> /home/vagrant/.bashrc # @TODO : improve  
+    echo "alias specs='sudo chmod -R 777 /home/vagrant/testdir/ ; chmod 777 /home/vagrant/testdir/tests/myrole/test ; specs'" >> /home/vagrant/.bashrc # @TODO : improve  
     exit
 fi
 
