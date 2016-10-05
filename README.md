@@ -30,7 +30,8 @@ Step 2 : Run and test your playbooks using Vagrant and VirtualBox
 Then, you will have to open two terminal on the same working directory.
 First terminal will be connecting to the virtual machine where you want to test, using SSH : 
 
-    vagrant ssh  
+    vagrant ssh ;
+    specs ; # will download Ansible
 
 The second terminal will be synchronizing your playbooks into the virtual machine :
 
@@ -41,7 +42,7 @@ You are ready to go :-)
 **Executing your playbooks and tests (assertions) :** 
 In the terminal connected to the virtual machine via SSH. You can run the command :
 
-    specs -p
+    specs -p # -p option avoid to download Ansible in order to execute tests faster 
 Please find more documentation one the rolespec github page : https://github.com/nickjj/rolespec 
  
 Step 3 : Test your playbooks  
