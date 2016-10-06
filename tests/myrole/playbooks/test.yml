@@ -1,9 +1,0 @@
---- 
-
-- name: Start 
-  hosts: 'placeholder_fqdn'
-  become: True
-
-  roles:
-
-  - role: ../roles/myrole/playbooks/roles/myrole
