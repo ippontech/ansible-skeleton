@@ -14,19 +14,20 @@
 # vagrant ssh -c specs
 #
 if [ "x$1" == "x--install" ]; then
-    # rolespec
-    sudo yum install rpm yum unzip git wget make vim -y
-    mv ~vagrant/specs /usr/local/bin/specs
+    cp ~vagrant/specs /usr/local/bin/specs
     chmod 755 /usr/local/bin/specs
+    if [[ -x '/usr/bin/apt-get' ]]; then
+      sudo apt-get install -qqy git
+    else
+      sudo yum install -q -y git
+    fi
     su vagrant -c 'git clone --depth 1 https://github.com/nickjj/rolespec'
-    cd /home/vagrant/rolespec && make install
-    /usr/local/bin/rolespec -i /home/vagrant/testdir 
-    ln -s /vagrant/ /home/vagrant/testdir/roles/$2 
-    ln -s /vagrant/tests/$2/ /home/vagrant/testdir/tests/ 
-    sudo chown -R vagrant:vagrant /home/vagrant/testdir 
-    sudo chmod -R 777 /home/vagrant/testdir 
-    echo "alias specs='sudo chmod -R 777 /home/vagrant/testdir/ ; chmod 777 /home/vagrant/testdir/tests/myrole/test ; specs'" >> /home/vagrant/.bashrc # @TODO : improve  
+    cd ~vagrant/rolespec && make install
+    su vagrant -c '/usr/local/bin/rolespec -i ~/testdir'
+    su vagrant -c "ln -s /vagrant/$2/$3 ~/testdir/$2/$3"
+    su vagrant -c "ln -s /vagrant/tests/$2/$3 ~/testdir/tests/$3"
+    chmod -R 777 "/home/vagrant/testdir/"
     exit
 fi
 
-cd /home/vagrant/testdir && rolespec -r $(ls roles) "$*" && sudo chmod -R 777 /home/vagrant/testdir/tests ; 
+cd ~vagrant/testdir && rolespec -r $(ls roles) "$*"

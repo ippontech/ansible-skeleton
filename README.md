@@ -64,4 +64,4 @@ We love to address our clients' toughest challenges, and we truly believe techno
 We are a consulting and software design company. Like millions of others.
 
 YET, we are also a community of passionate and proficient individuals.
-*Like no other.*
+*Like no other.* :-)

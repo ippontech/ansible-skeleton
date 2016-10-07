@@ -1,3 +1,0 @@
----
-- name : Go to tmp 
-  command: cd /tmp && ls /tmp 

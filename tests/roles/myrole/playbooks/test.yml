@@ -6,4 +6,4 @@
 
   roles:
 
-  - role: ../roles/myrole/playbooks/roles/myrole
+  - role: ../roles/myrole
