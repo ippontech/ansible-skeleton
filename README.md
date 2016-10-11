@@ -23,9 +23,10 @@ Step 1 : Develop your Ansible playbooks as you would normally do
  
 Step 2 : Run and test your playbooks using Vagrant and VirtualBox 
 ----------------------------------------------------------------
-**Running for the first time :** 
+**Running for the first time (in the tests/roles/myrole directory) :** 
 
-     vagrant up
+    cd tests/roles/myrole ; 
+    vagrant up ;
 
 Then, you will have to open two terminal on the same working directory.
 First terminal will be connecting to the virtual machine where you want to test, using SSH : 
@@ -35,6 +36,7 @@ First terminal will be connecting to the virtual machine where you want to test,
 
 The second terminal will be synchronizing your playbooks into the virtual machine :
 
+    cd tests/roles/myrole ; 
     vagrant rsync-auto
 
 You are ready to go :-)
